@@ -1,0 +1,20 @@
+// Bootstrap setup
+@import "../../vendor/bootstrap/scss/functions";
+
+// Theme functions
+@import "profilekit/functions";
+
+// Theme setup
+@import "profilekit/variables";
+
+// Custom setup
+@import "user-variables";
+
+// Bootstrap core
+@import '../../vendor/bootstrap/scss/bootstrap';
+
+// Theme core
+@import "profilekit/core";
+
+// User
+@import "user";

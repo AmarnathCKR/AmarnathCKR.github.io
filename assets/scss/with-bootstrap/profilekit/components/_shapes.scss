@@ -1,0 +1,102 @@
+//
+// shapes.scss
+// Theme component
+//
+
+.shape,
+.shape-advanced {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.shape {
+  position: relative;
+}
+
+.shape-advanced {
+  position: absolute;
+}
+
+.shape > *,
+.shape-advanced > * {
+  display: block;
+}
+
+// Hide SVG images in IE
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  .shape > svg {
+    display: none;
+  }
+}
+
+// Position
+
+.shape-top {
+  left: -1px;
+  right: -1px;
+}
+
+.shape-top:not(.shape-outside) {
+  top: -1px;
+}
+
+.shape-top.shape-outside {
+  top: 1px;
+  transform: translate3d(0, -100%, 0);
+}
+
+.shape-bottom {
+  left: -1px;
+  right: -1px;
+}
+
+.shape-bottom:not(.shape-outside) {
+  bottom: -1px;
+}
+
+.shape-bottom.shape-outside {
+  bottom: 1px;
+  transform: translate3d(0, 100%, 0);
+}
+
+.shape-right {
+  top: -1px;
+  bottom: -1px;
+}
+
+.shape-right:not(.shape-outside) {
+  right: -1px;
+}
+
+.shape-right.shape-outside {
+  right: 1px;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.shape-left {
+  top: -1px;
+  bottom: -1px;
+}
+
+.shape-left:not(.shape-outside) {
+  left: -1px;
+}
+
+.shape-left.shape-outside {
+  left: 1px;
+  transform: translate3d(100%, 0, 0);
+}
+
+// Orientation
+
+.shape-fluid-x > svg {
+  width: 100%;
+  height: auto;
+}
+
+.shape-fluid-y > svg {
+  width: auto;
+  height: 100%;
+}
